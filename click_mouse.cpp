@@ -18,13 +18,14 @@ int main()
 	bool run;//是否开启
 	
 	//输入时间 
-	cout << "请输入间隔时间（小于10）：";
 	while (1)
 	{
+		cout << "请输入间隔时间（小于10）：";
 		cin >> time;
 		if (time < 10)//间隔时间，最小为10，防止电脑卡死 
 		{
 			cout << "时间需要小于10哦，清重新输入...";
+			Sleep (500);
 			system ("cls");//cmd指令 
 		}
 		else break;
@@ -35,6 +36,7 @@ int main()
 	cin >> key;
 	
 	//开始连点
+	cout << "按n键开始，m键暂停，r键结束程序..."; 
 	while (1)
 	{
 		if (check ('N')) run = 1;//注意单引号里一定是大写，n开启 
